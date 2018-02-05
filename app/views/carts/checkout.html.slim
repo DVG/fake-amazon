@@ -1,0 +1,74 @@
+div.row
+  div.col-md-9
+    div.row
+      div.col-md-12
+        div.panel.panel-default
+          div.panel-heading
+            h3.panel-title Select Address
+          div.panel-body
+            div#shipping_address_section
+              - if current_user.shipping_addresses.any?
+                = render "shipping_address", address: current_user.shipping_addresses.first
+              - else
+                = render "shipping_form"
+
+    div.row
+      div.col-md-12
+        div.panel.panel-default
+          div.panel-heading
+            h3.panel-title Select Payment Method
+          div.panel-body
+            div#payment_method_section
+              - if current_user.payment_methods.any?
+                = render "payment_method", payment_method: current_user.payment_methods.first
+              - else
+                = render "payment_form"
+    div.row
+      div.col-md-12
+        = simple_form_for @order do |f|
+          div.panel.panel-default
+            div.panel-heading
+              h3.panel-title Review Shipping and Items
+            div.panel-body
+              div.col-md-6
+                - @cart.line_items.each do |line_item|
+                  div.row
+                    div.col-xs-4
+                      div.thumbnail
+                        = image_tag line_item.product.primary_image_url(:small)
+                    div.col-xs-8
+                      strong = line_item.product.name
+                      br
+                      = number_to_currency line_item.product.price
+                      br
+                      | Quantity: #{line_item.quantity}
+              div.col-md-6
+                strong Choose your shipping method
+
+                - @shipping_methods.each do |ship|
+                  div.form-group#shipping_options
+                    = f.radio_button :shipping_method_id, ship.identifier, data: { id: ship.identifier }
+                    span.shipping-option
+                      |  #{shipping_cost_label ship.shipping_cost(current_user)} #{ship.label}
+
+
+
+  div.col-md-3
+    div.well
+      div.row
+        div.col-xs-12
+          a.btn.btn-primary.btn-block#create_order_button href="#" Place Your Order
+      div.row
+        div.col-xs-12
+          small.text-center
+            br
+            p
+              | By placing your order you agree to Fake Amazon's
+              br
+              | privacy notice and conditions of use.
+      div.row
+        div.col-xs-12
+          h4 Order Summary
+      div.row
+        div.col-xs-12#order_summary
+          = render "order_summary", cart: @cart, shipping_method: nil

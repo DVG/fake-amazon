@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: fake_amazon
+  password: password
+
+development:
+  <<: *default
+  database: fake-amazon_development
+
+test:
+  <<: *default
+  database: fake-amazon_test
+
+production:
+  <<: *default
+  database: fake-amazon_production
+  username: fake-amazon
+  password: <%= ENV['FAKE-AMAZON_DATABASE_PASSWORD'] %>
