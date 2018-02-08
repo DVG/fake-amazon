@@ -10,20 +10,25 @@ puts "====> Creating Video Games Category"
 video_games = Category.find_or_create_by name: "Video Games"
 
 puts "====> Creating Products"
-ps4 = Product.find_or_create_by(name: "Playstation 4", list_price: 399.99, price: 349.99, category: video_games)
-upload_image "ps4_001.jpg", product: ps4
-upload_image "ps4_002.jpg", product: ps4
-upload_image "ps4_003.jpg", product: ps4
+switch = Product.find_or_create_by(name: 'Nintendo Switch - Neon Blue and Red Joy-Con', list_price: 299.99, price: 298.99, category: video_games)
+upload_image "switch_001.jpg", product: switch
+upload_image "switch_002.jpg", product: switch
+upload_image "switch_003.jpg", product: switch
 
-vita = Product.find_or_create_by(name: "Playstation Vita", list_price: 199.99, price: 169.99, category: video_games)
+mario = Product.find_or_create_by(name: "Super Mario Odyssey", list_price: 59.99, price: 48.66, category: video_games)
 
-upload_image "psvita_001.jpg", product: vita
-upload_image "psvita_002.jpg", product: vita
-upload_image "psvita_003.jpg", product: vita
+upload_image "mario_001.jpg", product: mario
+upload_image "mario_002.jpg", product: mario
 
-disgaea = Product.find_or_create_by name: "Disgaea 3: Absence of Detention", list_price: 29.99, price: 29.99, category: video_games
+zelda = Product.find_or_create_by(name: 'The Legend of Zelda: Breath of the Wild', list_price: 59.99, price: 52.00, category: video_games)
+upload_image "zelda_001.jpg", product: zelda
+upload_image "zelda_002.jpg", product: zelda
+upload_image "zelda_003.jpg", product: zelda
 
-upload_image "disgaea_3_001.jpg", product: disgaea
+stardew = Product.find_or_create_by(name: 'Stardew Valley', list_price: 19.99, price: 14.99, category: video_games)
+upload_image "stardew_001.jpg", product: stardew
+upload_image "stardew_002.jpg", product: stardew
+upload_image "stardew_003.jpg", product: stardew
 
 puts "====> Creating Shipping Methods"
 ShippingMethod.find_or_create_by identifier: ShippingMethod::STANDARD_SHIPPING, name: "Standard Shipping", price_per_item: 5.99
