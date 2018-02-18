@@ -20,5 +20,12 @@ services:
       POSTGRES_USER: fake_amazon
       POSTGRES_PASSWORD: password
 
+  selenium:
+    image: selenium/standalone-chrome-debug:3.8.1-aluminum
+    ports:
+      - "4444:4444"
+      - "5900:5900"
+
+
 volumes:
   db_data:
