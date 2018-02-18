@@ -16,6 +16,6 @@ If you get stuck, don't worry! We'll go over it as a group in a few minutes.
 
 ### How do I log in?
 
-|               Email |    Password |
--------------------------------------
+| Email               |    Password |
+| ------------------- | ----------- |
 | student@example.com | supersecret |
