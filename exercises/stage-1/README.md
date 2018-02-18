@@ -4,7 +4,7 @@ Hey, I heard you know how to write automated tests now. Awesome, because we have
 
 We're now gonna start offering free shipping on orders over $35. Yeah, I know:
 
-![Mind Blown](https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif)
+![Mind Blown](https://media0.giphy.com/media/75ZaxapnyMp2w/giphy.gif)
 
 Anyway, only on orders over $35. We're not gonna ship every pencil and bullet journal free. Make sure it works, cool?
 
