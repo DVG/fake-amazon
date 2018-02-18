@@ -13,3 +13,9 @@ Anyway, only on orders over $35. We're not gonna ship every pencil and bullet jo
 You're test is ready to get started in the script folder. Just run bin/run-test to run it. You'll want to add a cheap item (Stardew Valley) and make sure it doesn't have the free shipping option, and then add something else and make sure you get the free shipping option.
 
 If you get stuck, don't worry! We'll go over it as a group in a few minutes.
+
+### How do I log in?
+
+|               Email |    Password |
+-------------------------------------
+| student@example.com | supersecret |
