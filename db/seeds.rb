@@ -38,7 +38,8 @@ ShippingMethod.find_or_create_by identifier: ShippingMethod::PRIME_ONE_DAY, name
 ShippingMethod.find_or_create_by identifier: ShippingMethod::PRIME_NO_RUSH, name: "FREE No-Rush Shipping", price_per_item: 0
 
 puts "====> Creating Default User"
-bradley = User.find_or_initialize_by(email: "bradley.temple@gmail.com", username: "DVG")
-bradley.password = 'supersecret'
-bradley.password_confirmation = 'supersecret'
-bradley.save
+
+student = User.find_or_initialize_by(email: "student@example.com", username: "Student")
+student.password = 'supersecret'
+student.password_confirmation = 'supersecret'
+student.save
