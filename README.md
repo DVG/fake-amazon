@@ -1,24 +1,13 @@
-# README
+# Fake Amazon
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project used as an example for test automation, in my workshop *The Four Stages of Automated Testing*
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+This project is set up to work out of the box with Docker. If you do not have docker, do not know what that means, or are unable to use docker, you can use a virtual machine I create available here: https://drive.google.com/open?id=1ReY_ykBZK_j9nWaIjg03zPtvCyOrF2in
 
-* System dependencies
+## Starting the Project
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bin/bootstrap
+```
